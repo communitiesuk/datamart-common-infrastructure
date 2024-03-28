@@ -370,6 +370,7 @@ module "jaspersoft" {
   config_s3_log_expiration_days        = local.s3_log_expiration_days
   app_cloudwatch_log_expiration_days   = local.cloudwatch_log_expiration_days
   alarms_sns_topic_arn                 = module.notifications.alarms_sns_topic_arn
+  ebs_backup_error_notification_emails = local.all_notifications_email_addresses
 }
 
 module "iam_roles" {
